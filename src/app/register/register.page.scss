@@ -1,0 +1,29 @@
+h1 {
+    text-align: center;
+}
+
+span {
+    color: hsl(204, 70%, 53%);
+    font-weight: 800;
+}
+
+.header {
+    text-align: center;
+}
+
+.btn-register {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-register ion-button {
+    margin-top: 50px;
+    width: 150px;
+    --background: hsl(204, 70%, 53%);
+    --ion-text-color: #fff;
+}
+.link {
+    text-decoration: none;
+    color: white;
+}

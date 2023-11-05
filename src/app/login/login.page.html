@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="header">Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="heading">
+    <ion-toolbar>
+      <h1 size="large"><span>Watch</span>News</h1>
+    </ion-toolbar>
+  </div>
+
+  <form (ngSubmit)="loginUser()">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" [(ngModel)]="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <div class="btn-register">
+      <ion-button class="btn" shape="round" expand="full" type="submit">Login</ion-button>
+    </div>
+  </form>
+  <p class="ion-text-center">Forgot Password! <a (click)="resetPassword()">Reset</a></p>
+  <p class="ion-text-center">Don't have an account? <a routerLink="/register">Register</a></p>
+</ion-content>

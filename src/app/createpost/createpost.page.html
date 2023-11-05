@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Create Post</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- Header for large screens -->
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Create Post</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="ion-padding">
+    <form (ngSubmit)="createPost()" #postForm="ngForm">
+      <input type="file" (change)="handleFileInput($event)" accept="image/*">
+
+      <ion-item>
+        <ion-label position="floating">Title</ion-label>
+        <ion-input [(ngModel)]="title" name="title" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Content</ion-label>
+        <ion-textarea [(ngModel)]="content" name="content" required rows="6"></ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Heading</ion-label>
+        <ion-input [(ngModel)]="heading" name="heading" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Tags</ion-label>
+        <ion-input [(ngModel)]="tags" name="tags" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Category</ion-label>
+        <ion-select [(ngModel)]="category" name="category" required>
+          <ion-select-option value="Category1">Category1</ion-select-option>
+          <ion-select-option value="Category2">Category2</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Video Link</ion-label>
+        <ion-input [(ngModel)]="videoLink" name="videoLink" required></ion-input>
+      </ion-item>
+
+      <ion-button type="submit" expand="full" [disabled]="!postForm.form.valid">Upload Post</ion-button>
+    </form>
+  </div>
+</ion-content>

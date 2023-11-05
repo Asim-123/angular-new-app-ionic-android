@@ -1,0 +1,82 @@
+<ion-menu side="start" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Watch News</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-list>
+      <ion-item>
+        <ion-button expand="full" class="transparent-button" (click)="navigateTo('/search')">
+          Search
+        </ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-button expand="full" class="transparent-button" (click)="navigateTo('/settings')">
+          Settings
+        </ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-button expand="full" class="transparent-button" (click)="navigateTo('/tabs/tab3')">
+          Profile
+        </ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-button expand="full" class="transparent-button" (click)="navigateTo('/createpost')">
+          Create Post
+        </ion-button>
+      </ion-item>
+
+      <ion-item>
+        <ion-button expand="full" class="transparent-button" (click)="navigateTo('/capacitor-camera')">
+          Camera
+        </ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-button expand="full" class="transparent-button" (click)="resetPassword()">
+          Reset Password
+        </ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-button expand="full" class="transparent-button" (click)="logout()">
+          Logout
+        </ion-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Menu</ion-title>
+    <ion-buttons slot="end">
+      <ion-icon style="color: hsl(204, 70%, 53%);" name="notifications"></ion-icon>
+      <ion-menu-button style="color: hsl(204, 70%, 53%);" autoHide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" id="main-content">
+  Tap the button in the toolbar to open the menu.
+</ion-content>
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="tab1" href="/tabs/tab1">
+      <ion-icon name="home-outline"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab2" href="/tabs/tab2">
+      <ion-icon name="newspaper-outline"></ion-icon>
+      <ion-label>News</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab3" href="/tabs/tab3">
+      <ion-icon name="person-outline"></ion-icon>
+      <ion-label>Profile</ion-label>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+</ion-tabs>
+

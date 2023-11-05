@@ -1,0 +1,12 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>CapacitorCamera</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    <ion-button style="width: 50%;" color="secondary" (click)="takePicture()">Take a Picture</ion-button>
+  <img [src]="imageSrc" *ngIf="imageSrc" alt="Captured Image">
+  </div>
+</ion-content>

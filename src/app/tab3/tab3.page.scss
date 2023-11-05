@@ -1,0 +1,44 @@
+/* Style the profile picture */
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+.profile-picture {
+    display: flex;
+    justify-content: center;
+    width: 100px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+    margin: 0 auto; /* Center the profile picture */
+    border: 2px solid #ddd; /* Add a border (optional) */
+  }
+  
+  /* Style the profile picture input */
+  .profile-picture-input {
+    display: flex;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer; /* Add a cursor to indicate it's clickable */
+    /* You can add more styles as needed */
+  }
+  
+  
+  /* Style the profile picture label */
+  .profile-picture-label {
+    margin-top: 10px; /* Add some spacing between the picture and label */
+  }
+  
+  /* Style the username input */
+  ion-item.item-input.item-floating-label {
+    margin-bottom: 15px; /* Add spacing between input fields */
+  }
+  
+  /* Customize the label color if needed */
+  ion-label {
+    color: #007bff; /* Change the label color to blue (optional) */
+  }
+  

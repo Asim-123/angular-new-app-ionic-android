@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-searchbar style="margin-top: 60px;" [(ngModel)]="searchTerm" (ionInput)="searchPosts()"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngFor="let post of filteredPosts" style="margin-top: 20px;">
+    <ion-card-header>
+      <ion-card-title>
+        <ion-img [src]="post.urlToImage" alt="Image Description"></ion-img>
+        {{ post.title }}
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{ post.description }}
+      <div style="margin-top: 10px;">
+        <ion-button fill="clear" size="small">
+          <ion-icon slot="icon-only" size="small" name="play"></ion-icon>
+          Play
+        </ion-button>
+        <ion-button fill="clear" size="small" (click)="likePost(post)">
+          Like
+          <ion-icon slot="icon-only" [color]="likedPosts.includes(post.id) ? 'success' : 'medium'" name="heart"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
